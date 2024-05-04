@@ -8,7 +8,7 @@ int main ()
 
     printf("my name is \"Aman kumar chaurasiya\"");
     printf("\n");
-    printf("\\n"); // this is used for print /n
+    printf("\\n"); // this is used for print \n
 
     printf("        \\r");
 

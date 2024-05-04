@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int x = !2>-2;
-    printf("output of !2>-2 is %d",x);  // 1
+    int x = 3<0 && 5>0;  //f
+    printf("%d",x);
     printf("\n");
 
     return 0;
