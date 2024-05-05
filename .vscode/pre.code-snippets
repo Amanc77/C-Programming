@@ -13,6 +13,7 @@
 			"#include<stdio.h>",
 			 "int main()\n  {",
 
+			"  printf(\"\");",
 			"  $1",
 			"  $2",
 			
