@@ -24,9 +24,15 @@ int main()
       printf("30 Days");
       break;
   case 2:
-        printf("")
+        printf("there is 28 or 29 days");
+        break;
+
   default:
-    break;
+     printf("invalid input");
+
+    
+
+   
   }
 
 
