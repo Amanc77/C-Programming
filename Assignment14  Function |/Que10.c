@@ -5,7 +5,7 @@ void prime_factors(int n) {
     
     while (n > 1) {
         while (n % divisor == 0) {
-            printf("%d ", divisor);
+            printf("%d ",  divisor);
             n /= divisor;
         }
         divisor++;
@@ -13,9 +13,11 @@ void prime_factors(int n) {
 }
 
 
+
+
 int main() {
     int number = 84;
-    printf("Prime factors of %d are: ", number);
+    printf("Prime factors of %d are: ",  number);
     prime_factors(number);
     return 0;
 }
