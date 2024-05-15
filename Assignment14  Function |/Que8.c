@@ -25,7 +25,7 @@ int main() {
 
     long long numberOfArrngement = ncr(n, r);
 
-    printf("Total combination by %d and %d is %lld\n", n, r, numberOfArrngement);
+    printf("Total Arrngemert by %d and %d is %lld\n", n, r, numberOfArrngement);
 
     return 0;
 }
