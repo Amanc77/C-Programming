@@ -14,15 +14,15 @@ int main()
     scanf("%d",&arr[i]);
   }
   
-  int max = 0;
+  int max = arr[0];
 
-  for ( i = 0; i < n; i++)
+  for ( i = 1; i < n; i++)
   {
     if (arr[i]>max)
         max = arr[i];
   }
 
-  printf("Maximum number stored in Array is %d",max);
+  printf("\n \n Maximum number stored in Array is %d",max);
   
 
 

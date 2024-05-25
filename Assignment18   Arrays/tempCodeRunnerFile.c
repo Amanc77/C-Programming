@@ -28,7 +28,7 @@ printf("enter %d  numbers ",n);
   }
 
   
-  for ( i = 2; i < n; i++)
+  for ( i = 1; i < n; i++)
   {
     if (arr[i]>max)
     {

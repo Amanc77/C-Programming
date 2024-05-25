@@ -6,7 +6,7 @@ int main()
   int n;
   scanf("%d",&n);
 
-  int i, j,arr[n];
+  int i, j,arr[n],t;
 
   for ( i = 0; i < n; i++)
   {
@@ -17,17 +17,16 @@ int main()
 
   for ( i = 0; i < n; i++)
   {
-    for(j=i+1 ; j<n ; j++)
+   
+   for(j= 0; j <= n-i ; j++)
+   {
+    if(arr[j] > arr[j+1])
     {
-        if (arr[i] > arr[j])
-        {
-           int temp = arr[j];
-            arr[j] = arr[i];
-            arr[i] = temp;
-            
-        }
-
+      t = arr[j];
+      arr[j] = arr[ j+1];
+      arr[j+1] = t;
     }
+   }
      
   }
 

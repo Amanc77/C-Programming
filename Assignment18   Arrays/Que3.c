@@ -31,12 +31,9 @@ int main()
 
   printf("sum of odd number stored in Array is %d: \n",oddsum);
   
-    printf("sum of even number stored in Array is %d:",evensum);
+  printf("sum of even number stored in Array is %d:",evensum);
 
-
-
-  
-  
+ 
   printf("\n");
   return 0;
   }
