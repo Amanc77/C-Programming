@@ -1,65 +1,69 @@
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+#include<stdio.h>
 
-int main() 
-{
-    int a, b ,i;
-    scanf("%d\n%d", &a, &b);
-  	// Complete the code. 
-    int n = b-a+2;
-    int arr[n];
-    for( i = a ; i<=b ; i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    
-    for( i = a ; i<=b ; i++)
-    {
-        if(arr[i]<=9 && arr[i]>=1)
-        {
-            
-            if(arr[i] == 1)
-           printf("one\n");
-        
-         if(arr[i] == 2)
-           printf("two\n");
-           
-         if(arr[i] == 3)
-           printf("three\n");
-           
-         if(arr[i] == 4)
-           printf("four\n");
-           
-         if(arr[i] == 5)
-           printf("five\n");
-           
-         if(arr[i] == 6)
-           printf("six\n");
-           
-         if(arr[i] == 7)
-           printf("seven\n");
-           
-         if(arr[i] == 8)
-           printf("eight\n");
-           
-         if(arr[i] == 9)
-           printf("nine\n");
-           
-           
-            
-        }
-        else if(arr[i]%2 == 0)
-              printf("even\n"); 
-              
-        else {
-            printf("odd");
+
+
+void rotateArray(int A[], int n, int d, int m) {
+    int temp, i;
+    while (m > 0)
+     {
+        if (d == 1) 
+        { 
+            temp = A[n - 1];
+            for (i = n - 1; i > 0; i--) 
+            {
+                A[i] = A[i - 1];
             }
-        
-        
-        
+            A[0] = temp;
+        } else if (d == -1) 
+        { // Left rotation
+            temp = A[0];
+            for (i = 0; i < n - 1; i++)
+             {
+                A[i] = A[i + 1];
+            }
+            A[n - 1] = temp;
+        }
+        m--;
     }
-    return 0;
 }
 
+
+int main()
+  {
+  printf("enter the size of Array ");
+  int n,i,j;
+  scanf("%d",&n);
+  int arr[n];
+
+  printf("Now enter %d number in Array \n",n);
+
+  for( i = 0 ; i < n ; i++)
+  {
+    scanf("%d",&arr[i]);
+  } 
+
+printf("now enter 1 for Right rotation \n or enter -1 for Left rotation");
+int d;
+scanf("%d",&d);
+if(d != 1 && d != -1)
+  {
+  printf("invalid choice.");
+     
+  }
+
+printf("Enter how many time you want to rotet Array ");
+
+int m;
+scanf("%d",&m);
+
+rotateArray(arr,n,d,m);
+
+printf("\n After Roteting new Array become as: \n");
+
+for(i=0 ; i<n ; i++)
+     printf("%d, ",arr[i]);
+
+  
+  printf("\n");
+  return 0;
+  }
