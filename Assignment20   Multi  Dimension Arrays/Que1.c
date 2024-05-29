@@ -1,37 +1,45 @@
 #include<stdio.h>
 
-int maxNumber(int A[] , int size )
-{
-    int i;
-    int max = A[0];
 
-    for(i=1 ; i< size; i++)
-    {
-       if(A[i]>max)
-       {
-        max = A[i];
-       }
-    }
-    return max;
-}
 
 int main()
   {
   printf("enter the size of Array ");
-  int n,i,j;
-  scanf("%d",&n);
-  int arr[n];
+  int i[3],j[3],k[3];
 
-  printf("Now enter %d number in Array ",n);
+  int index;
 
-  for( i = 0 ; i < n ; i++)
+  
+
+  printf("enter 9 number in Matrix1: \n ");
+
+  for( index = 0 ; index < 9 ; index++)
   {
-    scanf("%d",&arr[i]);
+    scanf("%d",&i[index]);
   } 
 
-  int maxN = maxNumber(arr ,n);
+  printf("enter 9 number in Matrix2: \n ");
 
-  printf("Gratest number is %d ",maxN);
+  for( index = 0 ; index< 9 ; index++)
+  {
+    scanf("%d",&j[index]);
+  } 
+
+  
+  for( index = 0 ; index < 9 ; index++)
+   {
+    k[index] = i[index] + j[index];
+  } 
+
+   printf("Sum of matrix1 and matrix2 is : \n ");
+
+  for( index = 0 ; index < 9 ; index++)
+  {
+    printf("%d",k[index]);
+    
+  } 
+
+  
   
   printf("\n");
   return 0;
