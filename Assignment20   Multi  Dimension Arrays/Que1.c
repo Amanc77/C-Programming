@@ -5,39 +5,77 @@
 int main()
   {
   printf("enter the size of Array ");
-  int i[3],j[3],k[3];
+  int M1[3][3];
+  int M2[3][3];
+int Sum[3][3];
 
-  int index;
-
-  
-
-  printf("enter 9 number in Matrix1: \n ");
-
-  for( index = 0 ; index < 9 ; index++)
-  {
-    scanf("%d",&i[index]);
-  } 
-
-  printf("enter 9 number in Matrix2: \n ");
-
-  for( index = 0 ; index< 9 ; index++)
-  {
-    scanf("%d",&j[index]);
-  } 
+  int i,j;
 
   
-  for( index = 0 ; index < 9 ; index++)
-   {
-    k[index] = i[index] + j[index];
-  } 
 
-   printf("Sum of matrix1 and matrix2 is : \n ");
+  printf("enter 9 number in Matrix1: \n");
 
-  for( index = 0 ; index < 9 ; index++)
+  for( i = 0 ; i < 3 ; i++)
   {
-    printf("%d",k[index]);
-    
+    for(j=0 ; j <3 ; j++)
+        scanf("%d",&M1[i][j]);
   } 
+
+printf("first matrix is: \n");
+
+  for( i = 0 ; i < 3 ; i++)
+  {
+    for(j=0 ; j <3 ; j++)
+    {
+        printf("%d ",M1[i][j]);
+
+    }
+    printf("\n");
+  } 
+  printf("\nenter 9 number in Matrix2: \n");
+
+   for( i = 0 ; i < 3 ; i++)
+  {
+    for(j=0 ; j <3 ; j++)
+        scanf("%d",&M2[i][j]);
+  } 
+
+
+printf("Second matrix is: \n\n");
+
+  for( i = 0 ; i < 3 ; i++)
+  {
+    for(j=0 ; j <3 ; j++)
+    {
+        printf("%d ",M2[i][j]);
+
+    }
+    printf("\n");
+  } 
+
+  for( i = 0 ; i < 3 ; i++)
+  {
+    for(j=0 ; j <3 ; j++)
+        Sum[i][j] = M1[i][j] + M2[i][j];
+  } 
+
+  
+  
+
+   printf("Sum of matrix1 and matrix2 is : \n");
+
+
+  for( i = 0 ; i < 3 ; i++)
+  {
+    for(j=0 ; j <3 ; j++)
+    {
+        printf("%d ",Sum[i][j]);
+
+    }
+    printf("\n");
+  } 
+
+  
 
   
   
