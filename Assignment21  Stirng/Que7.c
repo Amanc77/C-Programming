@@ -1,36 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 
-#include<string.h>
 
-void f1()
-{
-    printf("enter a string ");
+int main() {
+   
+    printf("Enter a string: ");
 
     char s[50];
-    fgets(s,sizeof(s),stdin);
+    fgets(s, sizeof(s), stdin);
 
-    int i; 
-    for(i=0 ; s[i] != '\0' ; i++)
-    {
-        if(s[i] >= 'a' && s[i] <='z')
-        {
-            s[i] = s[i] - 32;
+    int n = strlen(s);
 
-        }
+    
+    if (s[n - 1] == '\n') {
+        s[n - 1] = '\0';
+        n--; 
     }
-    printf("All charter in upper case  is %s",s);
 
+    int i;
+    for (i = 0; i < n / 2; i++) {
+        char temp = s[i];
+        s[i] = s[n - 1 - i];
+        s[n - 1 - i] = temp;
+    }
+
+    printf("Reverse is: %s\n", s);
+    printf("\n");
+    return 0;
 }
-
-
-
-
-int main()
-  {
- 
-  f1();
-  
-  
-  printf("\n");
-  return 0;
-  }
