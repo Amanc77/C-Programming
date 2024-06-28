@@ -18,7 +18,7 @@ int main() {
         s2[i] = s[i];
     }
 
-    printf("Copped Arrays is: %s\n",s2);
+    printf("Copped string is: %s\n",s2);
 
     printf("\n");
     return 0;
